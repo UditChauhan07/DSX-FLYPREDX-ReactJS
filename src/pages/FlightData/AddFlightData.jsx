@@ -30,6 +30,33 @@ const initialForm = {
   scheduled_arrival_hour: "",
 };
 
+const exampleHints = {
+  DATE: "Wednesday, May 21",
+  TIME: "15:45",
+  FLIGHT: "6E203",
+  FROM: "Mumbai (BOM)",
+  TO: "Bengaluru (BLR)",
+  AIRLINE: "IndiGo",
+  AIRCRAFT: "A320neo (VT-IUH)",
+  STATUS: "Landed 16:05",
+  TEMPERRATURE_departures: "33",
+  WIND_departures: "5.2",
+  DIRECTION_departures: "140",
+  TEMPERRATURE_arrival: "31",
+  WIND_arrival: "6.1",
+  DIRECTION_arrival: "120",
+  scheduled_departures: "14:45",
+  actual_departures: "15:00",
+  scheduled_arrival: "15:45",
+  actual_arrival: "16:05",
+  delay_departure: "15",
+  delay_arrival: "20",
+  direction_departure: "1",
+  direction_arrival: "1",
+  scheduled_departure_hour: "14",
+  scheduled_arrival_hour: "15",
+};
+
 const AddFlightData = () => {
   const [formData, setFormData] = useState(initialForm);
   const [error, setError] = useState(null);
@@ -147,6 +174,9 @@ const AddFlightData = () => {
             focus:ring-2 focus:ring-blue-400 focus:outline-none
           "
                   />
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Example: {exampleHints[key]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -181,6 +211,9 @@ const AddFlightData = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   />
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Example: {exampleHints[key]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -213,6 +246,9 @@ const AddFlightData = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   />
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Example: {exampleHints[key]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -247,6 +283,9 @@ const AddFlightData = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 text-base rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none"
                   />
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Example: {exampleHints[key]}
+                  </p>
                 </div>
               ))}
             </div>
