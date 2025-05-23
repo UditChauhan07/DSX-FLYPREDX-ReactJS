@@ -10,7 +10,8 @@ import {
 import { WiThermometer, WiStrongWind } from "react-icons/wi";
 import Select from "react-select";
 
-const API_BASE_URL = "http://127.0.0.1:8000";
+// const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://ml-python-z0g9.onrender.com";
 
 const FlightML = () => {
   // --- dropdown data + loading/error

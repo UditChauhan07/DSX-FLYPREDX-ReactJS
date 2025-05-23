@@ -62,7 +62,8 @@ const AddFlightData = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
-  const BASE_Url = "http://127.0.0.1:8000";
+  // const BASE_Url = "http://127.0.0.1:8000";
+  const BASE_Url = "https://ml-python-z0g9.onrender.com";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
