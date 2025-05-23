@@ -109,7 +109,7 @@ const FlightAI = () => {
     try {
       const res = await fetch(
         // `http://localhost:3400/api/predict-arrival-delay`,
-        `http://fly.truet.net/api/predict-arrival-delay`,
+        `https://fly.truet.net/api/predict-arrival-delay`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
