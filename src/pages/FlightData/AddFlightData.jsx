@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaPlus, FaPlaneDeparture, FaPlaneArrival } from "react-icons/fa";
 import { WiThermometer, WiStrongWind } from "react-icons/wi";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const initialForm = {
   DATE: "",
@@ -58,6 +59,7 @@ const exampleHints = {
 };
 
 const AddFlightData = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState(initialForm);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
@@ -111,10 +113,13 @@ const AddFlightData = () => {
       if (response.status === 200) {
         console.log("Server response:", response);
         setSuccess(true);
+        setFormData(initialForm);
+        setTimeout(() => {
+          navigate("/")
+        }, 3000);
       }
 
       // setError(null);
-      // setFormData(initialForm);
     } catch (err) {
       console.error("Error saving flight:", err);
       setError(
